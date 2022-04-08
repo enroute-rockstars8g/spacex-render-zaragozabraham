@@ -8,11 +8,15 @@ export const RocketDisplay:FC<RocketDisplayProps> = ({
     flickr_images
 }) => {
     return(
-        <div>
-            <img src={flickr_images} />
-            No. of engines: {numberEngines}<br/>
-            Engine version: {enginesVersion}<br/>
-            Wiki: {wikipedia}<br/><br/>
+        <div className={'card'}>
+            <div className={'card-header'}>
+                <img src={flickr_images} className={'rocket-img'}/>
+            </div>
+            <div className={'card-body'}>
+                No. of engines: {numberEngines}<br/>
+                Engine version: {enginesVersion}<br/>
+                Wiki: {wikipedia}<br/><br/>
+            </div> 
         </div>
     )
 }
