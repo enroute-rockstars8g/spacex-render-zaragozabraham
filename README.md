@@ -1,1 +1,1 @@
-# SPA web using React with Typescript
+# React Project - SpaceX API
