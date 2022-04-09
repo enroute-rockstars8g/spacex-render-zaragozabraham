@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+#root{
+  width: 100vw;
+  height: 100vh;
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -6,30 +13,68 @@ body {
   background-color: #f7f8fc;
   font-family: "Roboto", sans-serif;
   color: #10182f;
+  height: 100vh;
 }
+
+.header{
+  height: 5vh;
+  padding: 12px;
+  text-align: center;
+  justify-content: center;
+  box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.053);
+  background-color: #10182f;
+}
+
+.header-logo{
+  height: 4vh;
+}
+
+.fill-white {
+    fill: #fff;
+}
+
+
+#titleDiv{
+  margin: 0 5%;
+}
+
+.sectionTitle{
+  width: fit-content;
+  border-bottom: 3px double #10182f;
+  color: #10182f;
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+}
+
 .container {
   display: flex;
-  width: 1040px;
-  justify-content: space-evenly;
+  margin: 1vh;
+  width: 90vw;
+  justify-content: space-around;
   flex-wrap: wrap;
+  overflow: auto;
 }
+
 .card {
   margin: 10px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
   overflow: hidden;
+  flex-wrap: wrap;
   width: 300px;
 }
+
 .card-header img {
   width: 100%;
   height: 200px;
   object-fit: cover;
 }
+
 .card-body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: flex-start;
   padding: 20px;
   min-height: 250px;
@@ -45,34 +90,54 @@ body {
   text-transform: uppercase;
   cursor: pointer;
 }
-.tag-teal {
-  background-color: #47bcd4;
+.tag-active {
+  background-color: #47d455;
 }
-.tag-purple {
-  background-color: #5e76bf;
-}
-.tag-pink {
-  background-color: #cd5b9f;
+
+.tag-inactive {
+  background-color: #cb4d6a;
 }
 
 .card-body p {
   font-size: 13px;
   margin: 0 0 40px;
 }
-.user {
+
+.motor {
   display: flex;
   margin-top: auto;
 }
 
-.user img {
+.motor img {
   border-radius: 50%;
   width: 40px;
   height: 40px;
   margin-right: 10px;
 }
-.user-info h5 {
+
+.motor-info h5 {
   margin: 0;
 }
-.user-info small {
+
+.motor-info small {
   color: #545d7a;
+}
+
+footer{
+  height: 3vh;
+}
+.footer{
+  display: flex;
+  height: 3vh;
+  padding: 12px;
+  justify-content: space-around;
+  background-color: #10182f;
+  color: #fff;
+  cursor: default;
+}
+
+a{
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
 }

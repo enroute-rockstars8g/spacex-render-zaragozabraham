@@ -14,8 +14,11 @@
 // }
 
 export interface RocketDisplayProps{
+    active: boolean,
     numberEngines: number,
     enginesVersion: string,
+    description: string,
+    name: string,
     wikipedia: string,
     flickr_images: string
 }

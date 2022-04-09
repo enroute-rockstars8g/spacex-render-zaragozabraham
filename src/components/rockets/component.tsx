@@ -17,12 +17,11 @@ export const Rockets:FC = () => {
         setRocketsData(response);
     };
 
-    return (<div>
-        Rockets!
+    return (<div className={'mainDiv'}>
         {rocketsData !== undefined ?
-        <div>
-            {rocketsData.map((rocket: { id: React.Key | null | undefined; engines: { number: number; version: string; }; wikipedia: string; flickr_images: string[]; }) => (
-                <RocketDisplay key={rocket.id} numberEngines={rocket.engines.number} enginesVersion={rocket.engines.version} wikipedia={rocket.wikipedia} flickr_images={rocket.flickr_images[0]} />
+        <div className={'container'}>
+            {rocketsData.map((rocket: { id: React.Key | null | undefined; active: boolean; engines: { number: number; version: string; }; description: string; name: string; wikipedia: string; flickr_images: string[]; }) => (
+                <RocketDisplay key={rocket.id} active={rocket.active} numberEngines={rocket.engines.number} enginesVersion={rocket.engines.version} description={rocket.description} name={rocket.name} wikipedia={rocket.wikipedia} flickr_images={rocket.flickr_images[0]} />
             ))}
         </div>
         : null}

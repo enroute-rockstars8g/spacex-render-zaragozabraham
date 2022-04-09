@@ -2,8 +2,11 @@ import React, { FC } from "react";
 import { RocketDisplayProps } from "./types";
 
 export const RocketDisplay:FC<RocketDisplayProps> = ({
+    active,
     numberEngines,
     enginesVersion,
+    description,
+    name,
     wikipedia,
     flickr_images
 }) => {
@@ -13,9 +16,15 @@ export const RocketDisplay:FC<RocketDisplayProps> = ({
                 <img src={flickr_images} className={'rocket-img'}/>
             </div>
             <div className={'card-body'}>
-                No. of engines: {numberEngines}<br/>
-                Engine version: {enginesVersion}<br/>
-                Wiki: {wikipedia}<br/><br/>
+                <span className={active ? 'tag tag-active' : 'tag tag-inactive'}>{active ? 'ACTIVE' : 'INACTIVE'}</span>
+                <h4>{name}</h4>
+                <p>{description}</p>
+                <div className={'motor'}>
+                    <div className={'motor-info'}>
+                        <h5>ENGINE INFO</h5>
+                        <small>Number of engines: {numberEngines} &nbsp;| &nbsp; Version: {enginesVersion}</small>
+                    </div>
+                </div>
             </div> 
         </div>
     )
